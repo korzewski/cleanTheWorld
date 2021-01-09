@@ -2,8 +2,8 @@ import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { routes } from './consts'
-import HomeScreen from './Screens/HomeScreen'
-import InfoScreen from './Screens/InfoScreen'
+import HomeScreen from './screens2/HomeScreen'
+import InfoScreen from './screens2/InfoScreen'
 
 const Tab = createBottomTabNavigator()
 
