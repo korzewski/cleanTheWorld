@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import { useStore, t } from "../store/translation";
 
@@ -7,7 +7,7 @@ export default () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Home screen !!!</Text>
+            <Text style={styles.text}>Home screen</Text>
 
             <Button
                 title="Toggle language"
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: '#000',
+        // backgroundColor: '#000',
     },
     text: {
         color: '#333',

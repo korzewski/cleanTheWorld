@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 import { useStore, t } from '../store/translation'
 
 export default () => {
