@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "422665039645",
+    "project_id": "clean-the-world-207f8",
+    "storage_bucket": "clean-the-world-207f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422665039645:android:572aa4e46ad600e161bbf4",
+        "android_client_info": {
+          "package_name": "com.cleantheworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422665039645-ue4fu98iran1ecvfv4f3sgghej62kl8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn5PK8ANp78gx_vySQyu03ng6o6UgV6ko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422665039645-ue4fu98iran1ecvfv4f3sgghej62kl8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

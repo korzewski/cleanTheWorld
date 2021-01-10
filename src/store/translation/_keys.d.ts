@@ -1,3 +1,4 @@
 export interface ITranslationKeys {
-    exampleText?: string,
+    exampleText?: string;
+    userProfileSignInText?: string;
 }

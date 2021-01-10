@@ -1,4 +1,6 @@
 export const routes = {
-    homeScreen: 'HomeScreen',
-    infoScreen: 'InfoScreen',
+    authenticationScreen: 'authenticationScreen',
+    languageToggle: 'languageToggle',
+    homeScreen: 'homeScreen',
+    userProfileScreen: 'userProfileScreen',
 }

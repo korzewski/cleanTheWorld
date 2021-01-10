@@ -1,16 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { useStore, t } from '../store/translation'
+import UserProfile from '../components/UserProfile'
 
 export default () => {
-    const store = useStore()
-
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Info screen</Text>
-            
-            <Text>lang: { store.state.language }</Text>
-            <Text>exampleText: { t('exampleText') }</Text>
+
+            <UserProfile />
         </View>
     )
 }
