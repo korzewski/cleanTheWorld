@@ -1,8 +1,9 @@
 import { createState, useState } from '@hookstate/core'
+import { FirebaseAuthTypes } from '@react-native-firebase/auth'
 
 const initialState = {
-    firebase: undefined,
-}
+    firebase: null as FirebaseAuthTypes.User | null,
+} 
 
 const store = createState(initialState)
 

@@ -8,7 +8,7 @@ import ButtonGoogleSignIn from '../components/ButtonGoogleSignIn'
 export default function AuthState() {
     const store = useStore()
 
-    if (!store.isAuthenticated) {
+    if (!store.state.firebase) {
         return (
             <View>
                 <Text>{ t('userProfileSignInText') }</Text>
@@ -21,7 +21,11 @@ export default function AuthState() {
     return (
         <View>
             <Text>User profile</Text>
-            <Text>Logged in {store.state.firebase.email}</Text>
+
+            { store.state.firebase.isAnonymous
+                ? <Text>Logged in as anonymous</Text>
+                : <Text>Logged in {store.state.firebase.email}</Text>
+            }
 
             <ButtonSignOut />
         </View>
