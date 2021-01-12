@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import * as admin from 'firebase-admin'
-import { handleError, validateUserRole } from '../helpers'
+import { handleError, TRole, validateUserRole } from '../helpers'
 
 function mapUserData(user: admin.auth.UserRecord) {
     const role = user.customClaims?.role || ''
@@ -22,8 +22,6 @@ export async function getAllUsers(req: Request, res: Response) {
 
         return res.status(201).send({
             users,
-            params: req.params,
-            locals: res.locals,
         })
     } catch (err) {
         return handleError(res, err)
@@ -31,19 +29,19 @@ export async function getAllUsers(req: Request, res: Response) {
 }
 
 export async function setUserRole(req: Request, res: Response) {
-    const { userId, role } = req.params
+    const { uid, role } = req.params as { uid: string, role: TRole }
 
     if (!validateUserRole(role)) {
         return handleError(res, { message: 'Wrong params' }, 400)
     }
     
     try {
-        await admin.auth().setCustomUserClaims(userId, {
+        await admin.auth().setCustomUserClaims(uid, {
             role,
         })
         
         return res.send({
-            userId,
+            uid,
             role,
         })
     } catch (err) {
