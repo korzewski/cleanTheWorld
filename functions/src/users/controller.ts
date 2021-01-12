@@ -28,6 +28,18 @@ export async function getAllUsers(req: Request, res: Response) {
     }
 }
 
+export async function getUser(req: Request, res: Response) {
+    try {
+        const { uid } = req.params as { uid: string }
+        const user = await admin.auth().getUser(uid)
+        const userData = mapUserData(user)
+
+        return res.status(201).send(userData)
+    } catch (err) {
+        return handleError(res, err)
+    }
+}
+
 export async function setUserRole(req: Request, res: Response) {
     const { uid, role } = req.params as { uid: string, role: TRole }
 
