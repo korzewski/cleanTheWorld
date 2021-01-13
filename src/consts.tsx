@@ -3,4 +3,5 @@ export const routes = {
     languageToggle: 'languageToggle',
     homeScreen: 'homeScreen',
     userProfileScreen: 'userProfileScreen',
+    litterListScreen: 'litterListScreen',
 }

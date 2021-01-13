@@ -26,7 +26,7 @@ export default () => {
     
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name={routes.authenticationScreen} component={AuthenticationScreen} />
                 <Stack.Screen name={routes.homeScreen} component={HomeScreen} />
             </Stack.Navigator>
